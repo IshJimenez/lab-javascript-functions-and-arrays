@@ -20,12 +20,12 @@ function findLongestWord (words) {
   let longestWord = ''
   for (let i=0; i<words.length; i++){
     if(words[i].length > longestWord.length){
-      console.log(`the new longest word is`, words[i])
+      // console.log(`the new longest word is`, words[i])
       longestWord = words[i]
     }
   
   }
-  console.log('Longest word is', longestWord)
+  // console.log('Longest word is', longestWord)
   return longestWord
 }
 
@@ -94,6 +94,37 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+
+function uniquifyArray(wordsUnique){
+  if (wordsUnique.length == 0) {
+    return null
+  }
+
+  let newArr = []
+
+  // wordsUnique.forEach(function(element){
+  //   if (newArr.indexOf(element) === -1) {
+  //     newArr.push(element)
+  //   }
+  // }) 
+
+  // wordsUnique.forEach(function(element){
+  //   if (!newArr.includes(element)) {
+  //     newArr.push(element)
+  //   }
+  // }) 
+
+  // for (let i = 0; i < wordsUnique.length; i++){
+  //   if (!newArr.includes(wordsUnique[i])) {
+  //     newArr.push(wordsUnique[i])
+  //   }
+  // }
+
+  // return newArr
+
+  return [...new Set(wordsUnique)]
+
+}
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
